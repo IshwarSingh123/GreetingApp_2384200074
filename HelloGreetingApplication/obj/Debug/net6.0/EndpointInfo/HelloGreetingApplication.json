@@ -125,10 +125,45 @@
           }
         }
       }
+    },
+    "/HelloGreeting/helloGreeeting": {
+      "post": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingBL"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingBL"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingBL"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "GreetingBL": {
+        "type": "object",
+        "additionalProperties": false
+      },
       "RequestModel": {
         "type": "object",
         "additionalProperties": false

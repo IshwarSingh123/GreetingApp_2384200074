@@ -72,5 +72,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "PostGreeting",
+    "RelativePath": "HelloGreeting/helloGreeeting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_greetingBL",
+        "Type": "BusinessLayer.Service.GreetingBL",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
