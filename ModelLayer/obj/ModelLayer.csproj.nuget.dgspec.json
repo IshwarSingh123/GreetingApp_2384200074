@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Backend\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj": {}
+    "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\ModelLayer\\ModelLayer.csproj": {}
   },
   "projects": {
-    "D:\\Backend\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj": {
+    "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\ModelLayer\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Backend\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj",
+        "projectUniqueName": "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\ModelLayer\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "D:\\Backend\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj",
+        "projectPath": "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\ModelLayer\\ModelLayer.csproj",
         "packagesPath": "C:\\Users\\frinds system\\.nuget\\packages\\",
-        "outputPath": "D:\\Backend\\HelloGreetingApplication\\ModelLayer\\obj\\",
+        "outputPath": "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\ModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

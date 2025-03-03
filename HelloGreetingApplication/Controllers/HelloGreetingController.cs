@@ -1,6 +1,9 @@
+using BusinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog.Web;
+using RepositoryLayer.Service;
+using BusinessLayer.Interface;
 
 
 namespace HelloGreetingApplication.Controllers
@@ -12,6 +15,7 @@ namespace HelloGreetingApplication.Controllers
     [Route("[controller]")]
     public class HelloGreetingController : ControllerBase
     {
+        private readonly IGreetingBL _greetingBL;
         private static List<RequestModel> requests = new List<RequestModel>
         {
         new RequestModel { Key = "User001", Value = 100 },
@@ -19,10 +23,12 @@ namespace HelloGreetingApplication.Controllers
         };
         private readonly ILogger<HelloGreetingController> _logger;
 
-        public HelloGreetingController(ILogger<HelloGreetingController> logger)
+        public HelloGreetingController(IGreetingBL greetingBL, ILogger<HelloGreetingController> logger)
         {
             _logger = logger;//Dependency Inject
+            _greetingBL = greetingBL;
         }
+        
 
         /// <summary>
         /// Get  method to get the greeting message
@@ -102,6 +108,13 @@ namespace HelloGreetingApplication.Controllers
 
             requests.Remove(request);
             return Ok($"Request with Key '{key}' deleted successfully.");
+        }
+
+        [HttpPost]
+        [Route("helloGreeeting")]
+        public IActionResult PostGreeting(GreetingBL _greetingBL)
+        {
+            return Ok(_greetingBL.GetGreeting());
         }
 
     }

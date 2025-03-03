@@ -9,3 +9,15 @@ D:\Backend\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryL
 D:\Backend\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
 D:\Backend\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
 D:\Backend\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.deps.json
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfo.cs
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.sourcelink.json
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll

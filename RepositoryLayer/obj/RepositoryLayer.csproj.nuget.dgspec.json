@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Backend\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj": {}
+    "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\RepositoryLayer\\RepositoryLayer.csproj": {}
   },
   "projects": {
-    "D:\\Backend\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Backend\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "D:\\Backend\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectPath": "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\RepositoryLayer\\RepositoryLayer.csproj",
         "packagesPath": "C:\\Users\\frinds system\\.nuget\\packages\\",
-        "outputPath": "D:\\Backend\\HelloGreetingApplication\\RepositoryLayer\\obj\\",
+        "outputPath": "C:\\Users\\frinds system\\Desktop\\GrretingAppVs\\GreetingApp_2384200074\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

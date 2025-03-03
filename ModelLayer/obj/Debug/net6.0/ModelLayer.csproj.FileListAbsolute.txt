@@ -9,3 +9,15 @@ D:\Backend\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
 D:\Backend\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
 D:\Backend\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
 D:\Backend\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.sourcelink.json
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
