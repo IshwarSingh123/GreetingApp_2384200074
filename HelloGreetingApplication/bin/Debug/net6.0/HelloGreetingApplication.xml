@@ -57,5 +57,12 @@
             <param name="frontendRequest"></param>
             <returns></returns>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GreetMessage(ModelLayer.Model.GreetingModel)">
+            <summary>
+            post method to  save greeting message to the database
+            </summary>
+            <param name="greetingModel"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -191,7 +191,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "post method to  save greeting message to the database",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -210,6 +212,28 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/HelloGreeting/findMessage": {
+      "post": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -237,6 +261,10 @@
       "GreetingModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "greetingMessage": {
             "type": "string",
             "nullable": true

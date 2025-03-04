@@ -40,7 +40,12 @@ namespace RepositoryLayer.Service
             return greetingModel;  // Return saved message
             }
 
-       
+        public GreetingEntity FindGreetingMessage(int id)
+        {
+            return _dbContext.Greeting.FirstOrDefault(g => g.GreetingId==id);
+           
+            
+        }
     }
   
     }
