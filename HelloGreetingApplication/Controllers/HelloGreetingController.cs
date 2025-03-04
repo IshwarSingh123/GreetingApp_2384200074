@@ -15,6 +15,7 @@ namespace HelloGreetingApplication.Controllers
     [Route("[controller]")]
     public class HelloGreetingController : ControllerBase
     {
+         ResponseModel<string> responseModel ;
         private readonly IGreetingBL _greetingBL;
         private static List<RequestModel> requests = new List<RequestModel>
         {
@@ -139,6 +140,25 @@ namespace HelloGreetingApplication.Controllers
         {
             string message = _greetingBL.SendGreeting(frontendRequest.FristName, frontendRequest.LastName);
             return Ok(new { Success = true, Message = message });
+        }
+
+        /// <summary>
+        /// post method to  save greeting message to the database
+        /// </summary>
+        /// <param name="greetingModel"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("GreetMessage")]
+
+        public IActionResult GreetMessage(GreetingModel greetingModel)
+        {
+            var result = _greetingBL.GreetingMessage(greetingModel);
+
+            responseModel = new ResponseModel<string>();
+            responseModel.Success = true;
+            responseModel.Message = "Message Added Successfully";
+            responseModel.Data = "";
+            return Created("Message Added: ", responseModel);
         }
     }
 }
