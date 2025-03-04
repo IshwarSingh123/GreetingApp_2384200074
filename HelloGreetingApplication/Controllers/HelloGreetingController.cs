@@ -160,5 +160,28 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Data = "";
             return Created("Message Added: ", responseModel);
         }
+        /// <summary>
+        /// post method to print message by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("findMessage")]
+        public IActionResult FindGreetingMessage(int id)
+        {
+            responseModel = new ResponseModel<string>();
+            var greeting = _greetingBL.FindGreetingMessage(id);
+            if (greeting == null)
+            {
+                responseModel.Success = false;
+                responseModel.Message = "Id not found";
+                responseModel.Data = "";
+                return NotFound(responseModel);
+            }
+            responseModel.Success = true;
+            responseModel.Message = greeting.GreetingMessage;
+            responseModel.Data = "";
+            return Ok(responseModel);
+        }
     }
 }

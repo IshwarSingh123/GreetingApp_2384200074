@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer.Interface;
 using ModelLayer.Model;
+using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
 
@@ -20,6 +21,12 @@ namespace BusinessLayer.Service
         {
             _greetingRL = greetingRL;
         }
+
+        public GreetingEntity FindGreetingMessage(int id)
+        {
+            return _greetingRL.FindGreetingMessage(id);
+        }
+
         public string GetGreeting()
             {
             return _greetingRL.GetGreeting();

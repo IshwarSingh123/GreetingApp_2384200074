@@ -16,6 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adae8c57e59e44d01edd0aa4f931ce65ec5045de")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6249022171bed913b3851af79130f8e4c3de244f")]
@@ -23,6 +24,9 @@ using System.Reflection;
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62ebccf3f6993afe95e0c39821d7171ce47331f7")]
 >>>>>>> UC4
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a7c1395f22041990667534a0fb54086a5834e78")]
+>>>>>>> UC5
 [assembly: System.Reflection.AssemblyProductAttribute("BusinessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BusinessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
