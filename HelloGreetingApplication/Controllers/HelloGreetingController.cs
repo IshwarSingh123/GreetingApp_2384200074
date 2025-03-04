@@ -58,7 +58,7 @@ namespace HelloGreetingApplication.Controllers
             return Ok(responseModel);
         }
         /// <summary>
-        /// Put method to update the details of key value
+        /// Put method to update the details of key value of entire
         /// </summary>
         /// <param name="requestModel"></param>
         /// <returns></returns>
@@ -80,7 +80,11 @@ namespace HelloGreetingApplication.Controllers
             
 
         }
-
+        /// <summary>
+        /// update a specfic task not the entire database
+        /// </summary>
+        /// <param name="requestModel"></param>
+        /// <returns></returns>
         [HttpPatch]
         public IActionResult Patch(RequestModel requestModel)
         {
@@ -95,7 +99,11 @@ namespace HelloGreetingApplication.Controllers
             return Ok($"Patched Key: {requestModel.Key}, Updated Value: {requestModel.Value}");
         }
 
-        
+        /// <summary>
+        /// Delete method to 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
 
         [HttpDelete("{key}")]
         public IActionResult Delete(string key)
@@ -109,13 +117,28 @@ namespace HelloGreetingApplication.Controllers
             requests.Remove(request);
             return Ok($"Request with Key '{key}' deleted successfully.");
         }
-
-        [HttpPost]
+        /// <summary>
+        /// get method to greeting Hello Uc2
+        /// </summary>
+        /// <param name="_greetingBL"></param>
+        /// <returns></returns>
+        [HttpGet]
         [Route("helloGreeeting")]
-        public IActionResult PostGreeting(GreetingBL _greetingBL)
+        public IActionResult PostGreeting()
         {
             return Ok(_greetingBL.GetGreeting());
         }
-
+        /// <summary>
+        /// post method to print hello firstName lastName
+        /// </summary>
+        /// <param name="frontendRequest"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("getGreeting")]
+        public IActionResult GetGreeting(FrontendRequest frontendRequest)
+        {
+            string message = _greetingBL.SendGreeting(frontendRequest.FristName, frontendRequest.LastName);
+            return Ok(new { Success = true, Message = message });
+        }
     }
 }

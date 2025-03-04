@@ -127,6 +127,18 @@
       }
     },
     "/HelloGreeting/helloGreeeting": {
+      "get": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/HelloGreeting/getGreeting": {
       "post": {
         "tags": [
           "HelloGreeting"
@@ -135,17 +147,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GreetingBL"
+                "$ref": "#/components/schemas/FrontendRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/GreetingBL"
+                "$ref": "#/components/schemas/FrontendRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/GreetingBL"
+                "$ref": "#/components/schemas/FrontendRequest"
               }
             }
           }
@@ -160,8 +172,18 @@
   },
   "components": {
     "schemas": {
-      "GreetingBL": {
+      "FrontendRequest": {
         "type": "object",
+        "properties": {
+          "fristName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
         "additionalProperties": false
       },
       "RequestModel": {
