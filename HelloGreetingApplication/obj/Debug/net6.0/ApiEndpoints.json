@@ -75,18 +75,28 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "PostGreeting",
-    "RelativePath": "HelloGreeting/helloGreeeting",
+    "Method": "GetGreeting",
+    "RelativePath": "HelloGreeting/getGreeting",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "_greetingBL",
-        "Type": "BusinessLayer.Service.GreetingBL",
+        "Name": "frontendRequest",
+        "Type": "ModelLayer.Model.FrontendRequest",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "PostGreeting",
+    "RelativePath": "HelloGreeting/helloGreeeting",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
