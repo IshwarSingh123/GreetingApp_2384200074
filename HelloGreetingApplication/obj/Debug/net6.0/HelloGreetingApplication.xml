@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HelloGreetingApplication</name>
+    </assembly>
+    <members>
+        <member name="T:HelloGreetingApplication.Controllers.HelloGreetingController">
+            <summary>
+            class providing API for HelloGreeting
+            </summary>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Get">
+            <summary>
+            Get  method to get the greeting message
+            </summary>
+            <returns>"Hello, World!"</returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Post(ModelLayer.Model.RequestModel)">
+            <summary>
+            Post method to send data to the Response Model
+            </summary>
+            <param name="requestModel"></param>
+            <returns>response model</returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Put(ModelLayer.Model.RequestModel)">
+            <summary>
+            Put method to update the details of key value of entire
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Patch(ModelLayer.Model.RequestModel)">
+            <summary>
+            update a specfic task not the entire database
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Delete(System.String)">
+            <summary>
+            Delete method to 
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting">
+            <summary>
+            get method to greeting Hello Uc2
+            </summary>
+            <param name="_greetingBL"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting(ModelLayer.Model.FrontendRequest)">
+            <summary>
+            post method to print hello firstName lastName
+            </summary>
+            <param name="frontendRequest"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

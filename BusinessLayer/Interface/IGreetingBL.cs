@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ModelLayer.Model;
 
 namespace BusinessLayer.Interface
 {
@@ -10,5 +11,7 @@ namespace BusinessLayer.Interface
     {
         string GetGreeting();
         string SendGreeting(string firstName, string lastName);
+
+       GreetingModel GreetingMessage(GreetingModel greetingModel);
     }
 }

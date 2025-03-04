@@ -2,7 +2,12 @@
   "openapi": "3.0.1",
   "info": {
     "title": "HelloGreetingApplication",
-    "version": "1.0"
+    "description": "API for Greeting App",
+    "contact": {
+      "name": "Ishwar Singh",
+      "email": "ishwarmars@gmail.com"
+    },
+    "version": "v1"
   },
   "paths": {
     "/HelloGreeting": {
@@ -10,6 +15,7 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Get  method to get the greeting message",
         "responses": {
           "200": {
             "description": "OK"
@@ -20,7 +26,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Post method to send data to the Response Model",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -49,7 +57,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Put method to update the details of key value of entire",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -78,7 +88,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "update a specfic task not the entire database",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -109,10 +121,12 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "Delete method to",
         "parameters": [
           {
             "name": "key",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "string"
@@ -131,6 +145,7 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "get method to greeting Hello Uc2",
         "responses": {
           "200": {
             "description": "OK"
@@ -143,7 +158,9 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "post method to print hello firstName lastName",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -168,6 +185,37 @@
           }
         }
       }
+    },
+    "/HelloGreeting/GreetMessage": {
+      "post": {
+        "tags": [
+          "HelloGreeting"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -180,6 +228,16 @@
             "nullable": true
           },
           "lastName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GreetingModel": {
+        "type": "object",
+        "properties": {
+          "greetingMessage": {
             "type": "string",
             "nullable": true
           }
