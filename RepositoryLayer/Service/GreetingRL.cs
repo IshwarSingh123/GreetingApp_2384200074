@@ -46,6 +46,17 @@ namespace RepositoryLayer.Service
            
             
         }
+
+        public List<GreetingEntity> GetAllGreetings()
+        {
+            return _dbContext.Greeting.ToList();
+            
+        }
+
+        public GreetingEntity EditMessage(int id)
+        {
+            return _dbContext.Greeting.FirstOrDefault( e=>e.GreetingId==id);
+        }
     }
   
     }

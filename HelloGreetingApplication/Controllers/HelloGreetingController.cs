@@ -4,6 +4,7 @@ using ModelLayer.Model;
 using NLog.Web;
 using RepositoryLayer.Service;
 using BusinessLayer.Interface;
+using RepositoryLayer.Entity;
 
 
 namespace HelloGreetingApplication.Controllers
@@ -181,6 +182,29 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Success = true;
             responseModel.Message = greeting.GreetingMessage;
             responseModel.Data = "";
+            return Ok(responseModel);
+        }
+
+        [HttpGet]
+        [Route("getAllGreetings")]
+        public IActionResult GetAllGreetings()
+        {
+            ResponseModel<List<GreetingEntity>> responseModel = new ResponseModel<List<GreetingEntity>>();
+            List<GreetingEntity> greetings = _greetingBL.GetAllGreetings();
+            if (greetings == null)
+            {
+                responseModel.Success = false;
+                responseModel.Message = "No Greeting Find";
+                responseModel.Data = new List<GreetingEntity>(); ;
+                return NotFound(responseModel);
+            }
+            else
+            {
+                responseModel.Success = true;
+                responseModel.Message = "List of All Messages";
+                responseModel.Data = greetings;
+            }
+            
             return Ok(responseModel);
         }
     }

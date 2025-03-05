@@ -14,5 +14,8 @@ namespace RepositoryLayer.Interface
 
         GreetingModel AddGreetingMessage(GreetingModel greetingModel);
         GreetingEntity FindGreetingMessage(int id);
+        List<GreetingEntity> GetAllGreetings();
+
+        GreetingEntity EditMessage(int id);
     }
 }

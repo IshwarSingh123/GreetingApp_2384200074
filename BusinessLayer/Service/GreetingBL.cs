@@ -38,6 +38,11 @@ namespace BusinessLayer.Service
             
         }
 
+        public List<GreetingEntity> GetAllGreetings()
+        {
+            return _greetingRL.GetAllGreetings();
+        }
+
         public string SendGreeting(string firstName, string lastName)
             {
                 if (firstName!=null && lastName != null)
@@ -57,5 +62,10 @@ namespace BusinessLayer.Service
 
                 return "Hello, World!";
             }
+
+        public GreetingEntity EditMessage(int id)
+        {
+            return _greetingRL.EditMessage(id);
         }
+    }
     }
