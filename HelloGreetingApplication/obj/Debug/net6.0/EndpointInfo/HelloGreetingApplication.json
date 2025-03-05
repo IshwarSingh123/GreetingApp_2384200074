@@ -224,15 +224,29 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "post method to print message by id",
         "parameters": [
           {
             "name": "id",
             "in": "query",
+            "description": "",
             "schema": {
               "type": "integer",
               "format": "int32"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/HelloGreeting/getAllGreetings": {
+      "get": {
+        "tags": [
+          "HelloGreeting"
         ],
         "responses": {
           "200": {

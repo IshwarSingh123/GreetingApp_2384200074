@@ -17,6 +17,7 @@ using System.Reflection;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adae8c57e59e44d01edd0aa4f931ce65ec5045de")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6249022171bed913b3851af79130f8e4c3de244f")]
@@ -27,6 +28,9 @@ using System.Reflection;
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a7c1395f22041990667534a0fb54086a5834e78")]
 >>>>>>> UC5
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eccd76bffca81edec930a63a15b16ad2b5bb08e2")]
+>>>>>>> UC6
 [assembly: System.Reflection.AssemblyProductAttribute("HelloGreetingApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HelloGreetingApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

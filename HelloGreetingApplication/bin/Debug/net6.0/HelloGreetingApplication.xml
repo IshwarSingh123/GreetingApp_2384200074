@@ -64,5 +64,12 @@
             <param name="greetingModel"></param>
             <returns></returns>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage(System.Int32)">
+            <summary>
+            post method to print message by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
