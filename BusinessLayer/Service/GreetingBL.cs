@@ -63,9 +63,18 @@ namespace BusinessLayer.Service
                 return "Hello, World!";
             }
 
-        public GreetingEntity EditMessage(int id)
+        public GreetingEntity EditMessage(GreetingModel greetingModel)
         {
-            return _greetingRL.EditMessage(id);
+            try
+            {
+                var result = _greetingRL.EditMessage(greetingModel);
+                return result;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                throw;
+            }
+
         }
     }
     }

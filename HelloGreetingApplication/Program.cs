@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using RepositoryLayer.Context;
 using Microsoft.EntityFrameworkCore;
+using ModelLayer.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 builder.Services.AddScoped<IGreetingRL,GreetingRL>();
+builder.Services.AddScoped<GreetingModel>();
 
 //databse connectivity
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
