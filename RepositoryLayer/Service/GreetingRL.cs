@@ -72,9 +72,29 @@ namespace RepositoryLayer.Service
             }
            
         }
+
+        public string DeleteMessage(GreetIdModel greetIdModel)
+        {
+            try
+            {
+                var result = _dbContext.Greeting.FirstOrDefault(e => e.GreetingId == greetIdModel.Id);
+                if (result == null)
+                {
+                    throw new KeyNotFoundException("Id Not Found");
+                }
+                _dbContext.Remove(result);
+                _dbContext.SaveChanges();
+                return "Message Delete Successfully!";
+                
+            }
+            catch(KeyNotFoundException ex)
+            {
+                throw;
+            }
+        }
     }
   
-    }
+}
 
 
 

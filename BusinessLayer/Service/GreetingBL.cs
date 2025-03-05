@@ -76,5 +76,18 @@ namespace BusinessLayer.Service
             }
 
         }
+
+        public string DeleteMessage(GreetIdModel greetIdModel)
+        {
+            try
+            {
+                var result = _greetingRL.DeleteMessage(greetIdModel);
+                return "Message Delete Successfully";
+            }
+            catch (KeyNotFoundException ex)
+            {
+                throw;
+            }
+        }
     }
     }

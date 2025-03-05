@@ -86,7 +86,7 @@ namespace HelloGreetingApplication.Controllers
 
         }
         /// <summary>
-        /// update a specfic task not the entire database
+        /// patch method update a specfic task not the entire database
         /// </summary>
         /// <param name="requestModel"></param>
         /// <returns></returns>
@@ -105,7 +105,7 @@ namespace HelloGreetingApplication.Controllers
         }
 
         /// <summary>
-        /// Delete method to 
+        /// Delete method to Delete a key value
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
@@ -134,7 +134,7 @@ namespace HelloGreetingApplication.Controllers
             return Ok(_greetingBL.GetGreeting());
         }
         /// <summary>
-        /// post method to print hello firstName lastName
+        /// GetGreeting method to print hello firstName lastName
         /// </summary>
         /// <param name="frontendRequest"></param>
         /// <returns></returns>
@@ -147,7 +147,7 @@ namespace HelloGreetingApplication.Controllers
         }
 
         /// <summary>
-        /// post method to  save greeting message to the database
+        /// GreetMessage method to  save greeting message to the database
         /// </summary>
         /// <param name="greetingModel"></param>
         /// <returns></returns>
@@ -165,7 +165,7 @@ namespace HelloGreetingApplication.Controllers
             return Created("Message Added: ", responseModel);
         }
         /// <summary>
-        /// post method to print message by id
+        /// FindGreetingMessage method to print message by id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -187,6 +187,11 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Data = "";
             return Ok(responseModel);
         }
+
+        /// <summary>
+        /// GetAllGreetings method to print all greeting message
+        /// </summary>
+        /// <returns></returns>
 
         [HttpGet]
         [Route("getAllGreetings")]
@@ -210,6 +215,12 @@ namespace HelloGreetingApplication.Controllers
             
             return Ok(responseModel);
         }
+
+        /// <summary>
+        /// EditMessage to edit the message by using Id
+        /// </summary>
+        /// <param name="greetingModel"></param>
+        /// <returns></returns>
         [HttpPatch]
         [Route("editMessage")]
 
@@ -234,6 +245,31 @@ namespace HelloGreetingApplication.Controllers
             }
 
             
+        }
+
+        /// <summary>
+        /// DeteleMessage method to delete a message
+        /// </summary>
+        /// <param name="greetIdModel"></param>
+        /// <returns></returns>
+        [HttpDelete]
+        [Route("deleteMessage")]
+        public IActionResult DeleteMessage(GreetIdModel greetIdModel)
+        {
+            try
+            {
+                responseModel = new ResponseModel<string>();
+                var result = _greetingBL.DeleteMessage(greetIdModel);
+
+                responseModel.Success = true;
+                responseModel.Message = "Message Deleted Successfully";
+                responseModel.Data = "";
+                return Ok(responseModel);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 
