@@ -53,10 +53,7 @@ namespace RepositoryLayer.Service
             
         }
 
-        public GreetingEntity EditMessage(int id)
-        {
-            return _dbContext.Greeting.FirstOrDefault( e=>e.GreetingId==id);
-        }
+
     }
   
     }
