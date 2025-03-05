@@ -25,10 +25,13 @@ namespace HelloGreetingApplication.Controllers
         };
         private readonly ILogger<HelloGreetingController> _logger;
 
-        public HelloGreetingController(IGreetingBL greetingBL, ILogger<HelloGreetingController> logger)
+        private readonly GreetingModel _greetingModel;
+
+        public HelloGreetingController(IGreetingBL greetingBL, ILogger<HelloGreetingController> logger, GreetingModel greetingModel)
         {
             _logger = logger;//Dependency Inject
             _greetingBL = greetingBL;
+            _greetingModel = greetingModel;
         }
         
 
@@ -207,8 +210,32 @@ namespace HelloGreetingApplication.Controllers
             
             return Ok(responseModel);
         }
+        [HttpPatch]
+        [Route("editMessage")]
+
+        public IActionResult EditMessage(GreetingModel greetingModel)
+        {
+            try
+            {
+                responseModel = new ResponseModel<string>();
+                var result = _greetingBL.EditMessage(greetingModel);
+
+                responseModel.Success = true;
+                responseModel.Message = "Message Updated Successfully";
+                responseModel.Data = "";
 
 
-       
+
+                return Ok(responseModel);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+
+            
+        }
     }
+
 }
+

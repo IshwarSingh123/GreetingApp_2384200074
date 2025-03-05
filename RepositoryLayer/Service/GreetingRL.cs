@@ -53,7 +53,25 @@ namespace RepositoryLayer.Service
             
         }
 
-
+        public GreetingEntity EditMessage(GreetingModel greetingModel)
+        {
+            try
+            {
+                var result = _dbContext.Greeting.FirstOrDefault(e => e.GreetingId == greetingModel.Id);
+                if (result == null)
+                {
+                    throw new KeyNotFoundException("Id Not found");
+                }
+                result.GreetingMessage = greetingModel.GreetingMessage;
+                _dbContext.SaveChanges();
+                return result;
+            }
+            catch (KeyNotFoundException ex)
+            {
+                throw;
+            }
+           
+        }
     }
   
     }
