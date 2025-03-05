@@ -19,6 +19,7 @@ using System.Reflection;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adae8c57e59e44d01edd0aa4f931ce65ec5045de")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6249022171bed913b3851af79130f8e4c3de244f")]
@@ -35,6 +36,9 @@ using System.Reflection;
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1607b21be920cea5f0c9b97b2a1b546f6f115ba")]
 >>>>>>> UC7
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb7da3ddff8f96529ca0d6717d92047fe7de81da")]
+>>>>>>> UC8
 [assembly: System.Reflection.AssemblyProductAttribute("BusinessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BusinessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
