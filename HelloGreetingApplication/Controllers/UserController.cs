@@ -32,7 +32,7 @@ namespace HelloGreetingApplication.Controllers
                 {
                     response.Success = true;
                     response.Message = "User Login Successfully.";
-                    response.Data = "";
+                    response.Data = user;
                     return Ok(response);
                 }
                 return BadRequest("Invalid Credentials!");

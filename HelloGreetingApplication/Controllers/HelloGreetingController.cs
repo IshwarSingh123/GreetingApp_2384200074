@@ -6,6 +6,7 @@ using RepositoryLayer.Service;
 using BusinessLayer.Interface;
 using RepositoryLayer.Entity;
 using Middleware.GlobalExceptionHandler;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace HelloGreetingApplication.Controllers
@@ -152,6 +153,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="greetingModel"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
         [Route("GreetMessage")]
 
@@ -193,7 +195,7 @@ namespace HelloGreetingApplication.Controllers
         /// GetAllGreetings method to print all greeting message
         /// </summary>
         /// <returns></returns>
-
+        [Authorize]
         [HttpGet]
         [Route("getAllGreetings")]
         public IActionResult GetAllGreetings()

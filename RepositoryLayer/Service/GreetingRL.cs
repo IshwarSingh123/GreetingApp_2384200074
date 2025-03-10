@@ -36,12 +36,15 @@ namespace RepositoryLayer.Service
             }
             var newMessage = new GreetingEntity
             {
-                GreetingMessage = greetingModel.GreetingMessage
+                GreetingMessage = greetingModel.GreetingMessage,
+                UserId   = greetingModel.UserId
+                
             };
             _dbContext.Greeting.Add(newMessage); // Add entity (not just message)
             _dbContext.SaveChanges();
             return greetingModel;  // Return saved message
-            }
+        }
+        
 
         public GreetingEntity FindGreetingMessage(int id)
         {

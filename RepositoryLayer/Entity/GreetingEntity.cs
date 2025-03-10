@@ -18,9 +18,10 @@ namespace RepositoryLayer.Entity
 
         [Required]
 
+        [ForeignKey("UserId")]
         public int UserId { get; set; }
 
-        [ForeignKey("UserId")]
+        
         public UserEntity User { get; set; }
 
 

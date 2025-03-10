@@ -10,5 +10,6 @@ namespace ModelLayer.Model
     {
         public int Id { get; set; }
         public string GreetingMessage {  get; set; }
+        public int UserId { get; set; }
     }
 }

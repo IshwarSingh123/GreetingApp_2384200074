@@ -23,13 +23,15 @@ namespace BusinessLayer.Service
 
         private readonly IUserRL _userRL;
         private readonly ILogger<UserRL> _logger;
+        private readonly JwtServices _jwtServices;
         
-        public UserBL(IUserRL userRL, ILogger<UserRL> logger)
+        public UserBL(IUserRL userRL, ILogger<UserRL> logger, JwtServices jwtServices)
         {
             _userRL = userRL;
             _logger = logger;
+            _jwtServices = jwtServices;
         }
-        public UserEntity Login(LoginUserModel userLoginModel)
+        public string Login(LoginUserModel userLoginModel)
         {
             try
             {
@@ -37,7 +39,8 @@ namespace BusinessLayer.Service
 
                 if (data != null && VerifyPassword(userLoginModel.Password,data.Password))
                 {
-                    return data;
+                    var token = _jwtServices.GenerateToken(data);
+                    return token;
                 }
                 return null;
             }
@@ -128,5 +131,9 @@ namespace BusinessLayer.Service
             }
         }
 
+        public UserEntity ForgetPassword(string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
