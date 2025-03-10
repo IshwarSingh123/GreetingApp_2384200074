@@ -91,5 +91,19 @@
             <param name="greetIdModel"></param>
             <returns></returns>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.Login(ModelLayer.Model.LoginUserModel)">
+            <summary>
+            Post Method for Login User
+            </summary>
+            <param name="userLoginModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.Registration(ModelLayer.Model.RegistrationUserModel)">
+            <summary>
+            Postmethod to register the user
+            </summary>
+            <param name="registrationUserModel"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
