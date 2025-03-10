@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer.Interface;
+using Microsoft.Extensions.Logging;
 using ModelLayer.Model;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interface;
@@ -16,10 +17,12 @@ namespace BusinessLayer.Service
         public class GreetingBL : IGreetingBL
         {
             IGreetingRL _greetingRL;
+        ILogger<GreetingRL> _logger;
 
-        public GreetingBL(IGreetingRL greetingRL)
+        public GreetingBL(IGreetingRL greetingRL, ILogger<GreetingRL> logger)
         {
             _greetingRL = greetingRL;
+            _logger = logger;
         }
 
         public GreetingEntity FindGreetingMessage(int id)
@@ -72,6 +75,7 @@ namespace BusinessLayer.Service
             }
             catch (KeyNotFoundException ex)
             {
+                _logger.LogError(ex.Message);
                 throw;
             }
 
@@ -86,6 +90,7 @@ namespace BusinessLayer.Service
             }
             catch (KeyNotFoundException ex)
             {
+                _logger.LogError(ex.Message);
                 throw;
             }
         }

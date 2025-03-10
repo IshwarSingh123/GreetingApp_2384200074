@@ -31,14 +31,14 @@
         </member>
         <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Patch(ModelLayer.Model.RequestModel)">
             <summary>
-            update a specfic task not the entire database
+            patch method update a specfic task not the entire database
             </summary>
             <param name="requestModel"></param>
             <returns></returns>
         </member>
         <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.Delete(System.String)">
             <summary>
-            Delete method to 
+            Delete method to Delete a key value
             </summary>
             <param name="key"></param>
             <returns></returns>
@@ -52,23 +52,43 @@
         </member>
         <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting(ModelLayer.Model.FrontendRequest)">
             <summary>
-            post method to print hello firstName lastName
+            GetGreeting method to print hello firstName lastName
             </summary>
             <param name="frontendRequest"></param>
             <returns></returns>
         </member>
         <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GreetMessage(ModelLayer.Model.GreetingModel)">
             <summary>
-            post method to  save greeting message to the database
+            GreetMessage method to  save greeting message to the database
             </summary>
             <param name="greetingModel"></param>
             <returns></returns>
         </member>
         <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage(System.Int32)">
             <summary>
-            post method to print message by id
+            FindGreetingMessage method to print message by id
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings">
+            <summary>
+            GetAllGreetings method to print all greeting message
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.EditMessage(ModelLayer.Model.GreetingModel)">
+            <summary>
+            EditMessage to edit the message by using Id
+            </summary>
+            <param name="greetingModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage(ModelLayer.Model.GreetIdModel)">
+            <summary>
+            DeteleMessage method to delete a message
+            </summary>
+            <param name="greetIdModel"></param>
             <returns></returns>
         </member>
     </members>

@@ -9,15 +9,26 @@ using System.Reflection;
 using RepositoryLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using ModelLayer.Model;
+using Middleware.GlobalExceptionHandler;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<Middleware.GlobalExceptionHandler.GlobalExceptionFilter>(); // Register Global Exception Filter
+})
+.AddNewtonsoftJson();
 
-builder.Services.AddControllers();
+
+
 builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 builder.Services.AddScoped<IGreetingRL,GreetingRL>();
 builder.Services.AddScoped<GreetingModel>();
+
+
+
+
 
 //databse connectivity
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
@@ -53,7 +64,7 @@ var app = builder.Build();
 app.UseSwagger();//json file create karta hai
 app.UseSwaggerUI();// colourfull UI create krta.
 
-
+app.UseExceptionHandler("/error");
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();

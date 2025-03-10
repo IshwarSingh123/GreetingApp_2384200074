@@ -30,6 +30,11 @@
         "requestBody": {
           "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestModel"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestModel"
@@ -61,6 +66,11 @@
         "requestBody": {
           "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestModel"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestModel"
@@ -88,10 +98,15 @@
         "tags": [
           "HelloGreeting"
         ],
-        "summary": "update a specfic task not the entire database",
+        "summary": "patch method update a specfic task not the entire database",
         "requestBody": {
           "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestModel"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/RequestModel"
@@ -121,7 +136,7 @@
         "tags": [
           "HelloGreeting"
         ],
-        "summary": "Delete method to",
+        "summary": "Delete method to Delete a key value",
         "parameters": [
           {
             "name": "key",
@@ -158,10 +173,15 @@
         "tags": [
           "HelloGreeting"
         ],
-        "summary": "post method to print hello firstName lastName",
+        "summary": "GetGreeting method to print hello firstName lastName",
         "requestBody": {
           "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FrontendRequest"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/FrontendRequest"
@@ -191,10 +211,15 @@
         "tags": [
           "HelloGreeting"
         ],
-        "summary": "post method to  save greeting message to the database",
+        "summary": "GreetMessage method to  save greeting message to the database",
         "requestBody": {
           "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingModel"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/GreetingModel"
@@ -224,7 +249,7 @@
         "tags": [
           "HelloGreeting"
         ],
-        "summary": "post method to print message by id",
+        "summary": "FindGreetingMessage method to print message by id",
         "parameters": [
           {
             "name": "id",
@@ -248,6 +273,7 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "GetAllGreetings method to print all greeting message",
         "responses": {
           "200": {
             "description": "OK"
@@ -260,8 +286,15 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "EditMessage to edit the message by using Id",
         "requestBody": {
+          "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetingModel"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/GreetingModel"
@@ -291,8 +324,15 @@
         "tags": [
           "HelloGreeting"
         ],
+        "summary": "DeteleMessage method to delete a message",
         "requestBody": {
+          "description": "",
           "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GreetIdModel"
+              }
+            },
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/GreetIdModel"

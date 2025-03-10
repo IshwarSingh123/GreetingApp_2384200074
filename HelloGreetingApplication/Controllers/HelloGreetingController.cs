@@ -5,6 +5,7 @@ using NLog.Web;
 using RepositoryLayer.Service;
 using BusinessLayer.Interface;
 using RepositoryLayer.Entity;
+using Middleware.GlobalExceptionHandler;
 
 
 namespace HelloGreetingApplication.Controllers
@@ -16,7 +17,7 @@ namespace HelloGreetingApplication.Controllers
     [Route("[controller]")]
     public class HelloGreetingController : ControllerBase
     {
-         ResponseModel<string> responseModel ;
+        ResponseModel<string> responseModel ;
         private readonly IGreetingBL _greetingBL;
         private static List<RequestModel> requests = new List<RequestModel>
         {
@@ -241,7 +242,9 @@ namespace HelloGreetingApplication.Controllers
             }
             catch (KeyNotFoundException ex)
             {
-                return NotFound(ex.Message);
+                _logger.LogError("Key not found Error.");
+                var errorResponse = ExceptionHandler.HandleException(ex,_logger);
+                return NotFound(errorResponse);
             }
 
             
@@ -268,7 +271,9 @@ namespace HelloGreetingApplication.Controllers
             }
             catch (KeyNotFoundException ex)
             {
-                return NotFound(ex.Message);
+                _logger.LogError("Key not found Error.");
+                var errorResponse = ExceptionHandler.HandleException(ex, _logger);
+                return NotFound(errorResponse);
             }
         }
     }
