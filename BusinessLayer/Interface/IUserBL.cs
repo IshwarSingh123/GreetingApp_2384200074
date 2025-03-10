@@ -10,7 +10,7 @@ namespace BusinessLayer.Interface
 {
     public interface IUserBL
     {
-        UserEntity Login(LoginUserModel userLoginModel);
+        string Login(LoginUserModel userLoginModel);
 
         UserEntity Registration(RegistrationUserModel registrationUserModel);
         string PasswordHashing(string userPass);
