@@ -8,6 +8,7 @@ using ModelLayer.Model;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Context;
 using RepositoryLayer.Entity;
+using Microsoft.Extensions.Logging;
 
 namespace RepositoryLayer.Service
 {
@@ -15,9 +16,11 @@ namespace RepositoryLayer.Service
     {
         //ResponseModel<string> responseModel = new ResponseModel<string>();
         HelloGreetingAppContext _dbContext;
-        public GreetingRL(HelloGreetingAppContext dbContext)
+        private readonly ILogger<GreetingRL> _logger;
+        public GreetingRL(HelloGreetingAppContext dbContext, ILogger<GreetingRL> logger)
         {
             _dbContext = dbContext;
+            _logger = logger;
         }
 
         public string GetGreeting()
@@ -66,8 +69,10 @@ namespace RepositoryLayer.Service
                 _dbContext.SaveChanges();
                 return result;
             }
+            
             catch (KeyNotFoundException ex)
             {
+                _logger.LogError(ex.Message);
                 throw;
             }
            
@@ -89,6 +94,7 @@ namespace RepositoryLayer.Service
             }
             catch(KeyNotFoundException ex)
             {
+                _logger.LogError(ex.Message);
                 throw;
             }
         }

@@ -2023,3 +2023,132 @@ SELECT @@ROWCOUNT;
 2025-03-05 12:31:59.2507 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage (HelloGreetingApplication) in 489.6238ms 
 2025-03-05 12:31:59.2507 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage (HelloGreetingApplication)' 
 2025-03-05 12:31:59.2507 | INFO | Request finished HTTP/2 DELETE https://localhost:7055/HelloGreeting/deleteMessage application/json 13 - 200 - application/json;+charset=utf-8 494.6547ms 
+2025-03-10 13:37:28.1524 | INFO | Now listening on: https://localhost:7055 
+2025-03-10 13:37:28.2080 | INFO | Now listening on: http://localhost:5191 
+2025-03-10 13:37:28.2763 | INFO | Application started. Press Ctrl+C to shut down. 
+2025-03-10 13:37:28.2763 | INFO | Hosting environment: Development 
+2025-03-10 13:37:28.2801 | INFO | Content root path: C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\HelloGreetingApplication\ 
+2025-03-10 13:37:29.1701 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.html - - 
+2025-03-10 13:37:29.5199 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.html - - - 200 - text/html;charset=utf-8 352.2947ms 
+2025-03-10 13:37:29.5282 | INFO | Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-10 13:37:29.5282 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/swagger-ui.css - - 
+2025-03-10 13:37:29.5282 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.css - - 
+2025-03-10 13:37:29.5282 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/swagger-ui-bundle.js - - 
+2025-03-10 13:37:29.5424 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.js - - 
+2025-03-10 13:37:29.5588 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/swagger-ui-standalone-preset.js - - 
+2025-03-10 13:37:29.5588 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 20.0461ms 
+2025-03-10 13:37:29.5946 | INFO | Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 66.3060ms 
+2025-03-10 13:37:29.6019 | INFO | The file /index.css was not modified 
+2025-03-10 13:37:29.6019 | INFO | The file /swagger-ui.css was not modified 
+2025-03-10 13:37:29.6019 | INFO | The file /swagger-ui-bundle.js was not modified 
+2025-03-10 13:37:29.6019 | INFO | The file /swagger-ui-standalone-preset.js was not modified 
+2025-03-10 13:37:29.6019 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/swagger-ui.css - - - 304 - text/css 67.8215ms 
+2025-03-10 13:37:29.6019 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.css - - - 304 - text/css 67.4685ms 
+2025-03-10 13:37:29.6019 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/swagger-ui-bundle.js - - - 304 - application/javascript 66.9693ms 
+2025-03-10 13:37:29.6019 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 43.9892ms 
+2025-03-10 13:37:29.6166 | INFO | Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - - 
+2025-03-10 13:37:29.6726 | INFO | Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.9891ms 
+2025-03-10 13:37:29.7746 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/v1/swagger.json - - 
+2025-03-10 13:37:29.7746 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.5321ms 
+2025-03-10 14:28:31.0657 | INFO | Now listening on: https://localhost:7055 
+2025-03-10 14:28:31.1175 | INFO | Now listening on: http://localhost:5191 
+2025-03-10 14:28:31.1784 | INFO | Application started. Press Ctrl+C to shut down. 
+2025-03-10 14:28:31.1784 | INFO | Hosting environment: Development 
+2025-03-10 14:28:31.1784 | INFO | Content root path: C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\HelloGreetingApplication\ 
+2025-03-10 14:28:32.0423 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.html - - 
+2025-03-10 14:28:32.4522 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.html - - - 200 - text/html;charset=utf-8 412.6692ms 
+2025-03-10 14:28:32.4864 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.js - - 
+2025-03-10 14:28:32.4864 | INFO | Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-10 14:28:32.4864 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 2.3824ms 
+2025-03-10 14:28:32.4864 | INFO | Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - - 
+2025-03-10 14:28:32.4864 | INFO | Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 9.7333ms 
+2025-03-10 14:28:32.5766 | INFO | Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 86.2941ms 
+2025-03-10 14:28:32.7115 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/v1/swagger.json - - 
+2025-03-10 14:28:32.7246 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.0884ms 
+2025-03-10 14:28:51.7011 | INFO | Request starting HTTP/2 POST https://localhost:7055/HelloGreeting/findMessage?id=99 - 0 
+2025-03-10 14:28:51.7258 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication)' 
+2025-03-10 14:28:51.8191 | INFO | Route matched with {action = "FindGreetingMessage", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FindGreetingMessage(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-10 14:28:54.3064 | INFO | Entity Framework Core 6.0.36 initialized 'HelloGreetingAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-10 14:28:57.8204 | INFO | Executed DbCommand (247ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[GreetingId], [g].[GreetingMessage]
+FROM [Greeting] AS [g]
+WHERE [g].[GreetingId] = @__id_0 
+2025-03-10 14:28:57.9376 | INFO | Executing NotFoundObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-10 14:28:58.4362 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication) in 6601.3643ms 
+2025-03-10 14:28:58.4362 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication)' 
+2025-03-10 14:28:58.4713 | INFO | Request finished HTTP/2 POST https://localhost:7055/HelloGreeting/findMessage?id=99 - 0 - 404 52 application/json;+charset=utf-8 6770.2236ms 
+2025-03-10 14:29:22.7566 | INFO | Request starting HTTP/2 DELETE https://localhost:7055/HelloGreeting/deleteMessage application/json-patch+json 14 
+2025-03-10 14:29:22.7743 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage (HelloGreetingApplication)' 
+2025-03-10 14:29:22.7743 | INFO | Route matched with {action = "DeleteMessage", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteMessage(ModelLayer.Model.GreetIdModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-10 14:29:22.9636 | INFO | Entity Framework Core 6.0.36 initialized 'HelloGreetingAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-10 14:29:23.0317 | INFO | Executed DbCommand (26ms) [Parameters=[@__greetIdModel_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[GreetingId], [g].[GreetingMessage]
+FROM [Greeting] AS [g]
+WHERE [g].[GreetingId] = @__greetIdModel_Id_0 
+2025-03-10 14:29:23.2573 | ERROR | Key not found Error. 
+2025-03-10 14:29:23.2573 | ERROR | An unexpected error occurred. System.Collections.Generic.KeyNotFoundException: Id Not Found
+   at RepositoryLayer.Service.GreetingRL.DeleteMessage(GreetIdModel greetIdModel) in C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\Service\GreetingRL.cs:line 83
+   at BusinessLayer.Service.GreetingBL.DeleteMessage(GreetIdModel greetIdModel) in C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\BusinessLayer\Service\GreetingBL.cs:line 84
+   at HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage(GreetIdModel greetIdModel) in C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\HelloGreetingApplication\Controllers\HelloGreetingController.cs:line 265
+2025-03-10 14:29:23.4283 | INFO | Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-10 14:29:23.4439 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage (HelloGreetingApplication) in 663.3861ms 
+2025-03-10 14:29:23.4439 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteMessage (HelloGreetingApplication)' 
+2025-03-10 14:29:23.4439 | INFO | Request finished HTTP/2 DELETE https://localhost:7055/HelloGreeting/deleteMessage application/json-patch+json 14 - 404 89 application/json;+charset=utf-8 688.6990ms 
+2025-03-10 14:36:05.4020 | INFO | Now listening on: https://localhost:7055 
+2025-03-10 14:36:05.4348 | INFO | Now listening on: http://localhost:5191 
+2025-03-10 14:36:05.4834 | INFO | Application started. Press Ctrl+C to shut down. 
+2025-03-10 14:36:05.4850 | INFO | Hosting environment: Development 
+2025-03-10 14:36:05.4850 | INFO | Content root path: C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\HelloGreetingApplication\ 
+2025-03-10 14:36:06.5695 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.html - - 
+2025-03-10 14:36:06.9193 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.html - - - 200 - text/html;charset=utf-8 353.4076ms 
+2025-03-10 14:36:06.9334 | INFO | Request starting HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-10 14:36:06.9334 | INFO | Request starting HTTP/2 GET https://localhost:7055/_vs/browserLink - - 
+2025-03-10 14:36:06.9334 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/index.js - - 
+2025-03-10 14:36:06.9334 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 2.4811ms 
+2025-03-10 14:36:06.9401 | INFO | Request finished HTTP/2 GET https://localhost:7055/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 6.6759ms 
+2025-03-10 14:36:07.0051 | INFO | Request finished HTTP/2 GET https://localhost:7055/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 71.3451ms 
+2025-03-10 14:36:07.4643 | INFO | Request starting HTTP/2 GET https://localhost:7055/Swagger/v1/swagger.json - - 
+2025-03-10 14:36:07.4731 | INFO | Request finished HTTP/2 GET https://localhost:7055/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.7218ms 
+2025-03-10 14:36:25.8700 | INFO | Request starting HTTP/2 PATCH https://localhost:7055/HelloGreeting/editMessage application/json-patch+json 51 
+2025-03-10 14:36:25.8946 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.EditMessage (HelloGreetingApplication)' 
+2025-03-10 14:36:25.9706 | INFO | Route matched with {action = "EditMessage", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult EditMessage(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-10 14:36:28.4758 | INFO | Entity Framework Core 6.0.36 initialized 'HelloGreetingAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-10 14:36:31.3294 | INFO | Executed DbCommand (199ms) [Parameters=[@__greetingModel_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[GreetingId], [g].[GreetingMessage]
+FROM [Greeting] AS [g]
+WHERE [g].[GreetingId] = @__greetingModel_Id_0 
+2025-03-10 14:36:31.5779 | ERROR | Id Not found 
+2025-03-10 14:36:31.6845 | ERROR | Id Not found 
+2025-03-10 14:36:31.7836 | ERROR | Key not found Error. 
+2025-03-10 14:36:31.7836 | ERROR | An unexpected error occurred. System.Collections.Generic.KeyNotFoundException: Id Not found
+   at RepositoryLayer.Service.GreetingRL.EditMessage(GreetingModel greetingModel) in C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\RepositoryLayer\Service\GreetingRL.cs:line 66
+   at BusinessLayer.Service.GreetingBL.EditMessage(GreetingModel greetingModel) in C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\BusinessLayer\Service\GreetingBL.cs:line 73
+   at HelloGreetingApplication.Controllers.HelloGreetingController.EditMessage(GreetingModel greetingModel) in C:\Users\frinds system\Desktop\GrretingAppVs\GreetingApp_2384200074\HelloGreetingApplication\Controllers\HelloGreetingController.cs:line 233
+2025-03-10 14:36:31.9310 | INFO | Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-10 14:36:32.0979 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.EditMessage (HelloGreetingApplication) in 6114.1462ms 
+2025-03-10 14:36:32.0979 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.EditMessage (HelloGreetingApplication)' 
+2025-03-10 14:36:32.1263 | INFO | Request finished HTTP/2 PATCH https://localhost:7055/HelloGreeting/editMessage application/json-patch+json 51 - 404 89 application/json;+charset=utf-8 6256.4680ms 
+2025-03-10 14:37:15.1733 | INFO | Request starting HTTP/2 POST https://localhost:7055/HelloGreeting/findMessage?id=5241 - 0 
+2025-03-10 14:37:15.2282 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication)' 
+2025-03-10 14:37:15.2390 | INFO | Route matched with {action = "FindGreetingMessage", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FindGreetingMessage(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-10 14:37:15.3073 | INFO | Entity Framework Core 6.0.36 initialized 'HelloGreetingAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-10 14:37:15.3379 | INFO | Executed DbCommand (17ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[GreetingId], [g].[GreetingMessage]
+FROM [Greeting] AS [g]
+WHERE [g].[GreetingId] = @__id_0 
+2025-03-10 14:37:15.3379 | INFO | Executing NotFoundObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-10 14:37:15.3379 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication) in 103.5595ms 
+2025-03-10 14:37:15.3379 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication)' 
+2025-03-10 14:37:15.3379 | INFO | Request finished HTTP/2 POST https://localhost:7055/HelloGreeting/findMessage?id=5241 - 0 - 404 52 application/json;+charset=utf-8 171.3382ms 
+2025-03-10 14:37:17.6557 | INFO | Request starting HTTP/2 POST https://localhost:7055/HelloGreeting/findMessage?id=5241 - 0 
+2025-03-10 14:37:17.6578 | INFO | Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication)' 
+2025-03-10 14:37:17.6578 | INFO | Route matched with {action = "FindGreetingMessage", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FindGreetingMessage(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-10 14:37:17.8222 | INFO | Entity Framework Core 6.0.36 initialized 'HelloGreetingAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-10 14:37:17.8537 | INFO | Executed DbCommand (19ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[GreetingId], [g].[GreetingMessage]
+FROM [Greeting] AS [g]
+WHERE [g].[GreetingId] = @__id_0 
+2025-03-10 14:37:17.8537 | INFO | Executing NotFoundObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-10 14:37:17.8537 | INFO | Executed action HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication) in 196.4244ms 
+2025-03-10 14:37:17.8537 | INFO | Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.FindGreetingMessage (HelloGreetingApplication)' 
+2025-03-10 14:37:17.8537 | INFO | Request finished HTTP/2 POST https://localhost:7055/HelloGreeting/findMessage?id=5241 - 0 - 404 52 application/json;+charset=utf-8 200.5644ms 
