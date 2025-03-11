@@ -12,9 +12,10 @@ namespace BusinessLayer.Interface
     {
         string Login(LoginUserModel userLoginModel);
 
-        UserEntity Registration(RegistrationUserModel registrationUserModel);
+        Task<UserEntity> Registration(RegistrationUserModel registrationUserModel);
         string PasswordHashing(string userPass);
         bool VerifyPassword(string userPass, string storedHashPass);
-        UserEntity ForgetPassword(string password);
+        Task<bool> ForgetPasswordAsync(ForgetPasswordModel model);
+        Task<bool> ResetPasswordAsync(ResetPasswordModel model);
     }
 }

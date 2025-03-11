@@ -24,12 +24,14 @@ namespace BusinessLayer.Service
         private readonly IUserRL _userRL;
         private readonly ILogger<UserRL> _logger;
         private readonly JwtServices _jwtServices;
+        private readonly IEmailService _emailService;
         
-        public UserBL(IUserRL userRL, ILogger<UserRL> logger, JwtServices jwtServices)
+        public UserBL(IUserRL userRL, ILogger<UserRL> logger, JwtServices jwtServices,IEmailService emailService)
         {
             _userRL = userRL;
             _logger = logger;
             _jwtServices = jwtServices;
+            _emailService = emailService;
         }
         public string Login(LoginUserModel userLoginModel)
         {
@@ -53,11 +55,11 @@ namespace BusinessLayer.Service
             
         }
 
-        public UserEntity Registration(RegistrationUserModel registrationUserModel)
+        public async Task<UserEntity> Registration(RegistrationUserModel registrationUserModel)
         {
             try
             {
-                var existingUser = _userRL.GetEmail(registrationUserModel.Email);
+                var existingUser = await _userRL.GetEmailAsync(registrationUserModel.Email);
                 if (existingUser != null)
                 {
                     throw new Exception("User already Registered!");
@@ -73,7 +75,7 @@ namespace BusinessLayer.Service
                     PhoneNumber = registrationUserModel.PhoneNumber,
                 };
 
-                return _userRL.Registration(newUser);
+                return await _userRL.Registration(newUser);
             }
             catch (Exception ex)
             {
@@ -131,9 +133,51 @@ namespace BusinessLayer.Service
             }
         }
 
-        public UserEntity ForgetPassword(string password)
+
+        public async Task<bool> ForgetPasswordAsync(ForgetPasswordModel forgetPasswordModel)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(forgetPasswordModel?.Email))
+            {
+                throw new ArgumentException("Email cannot be null or empty.", nameof(forgetPasswordModel.Email));
+            }
+
+            var user = await _userRL.GetEmailAsync(forgetPasswordModel.Email);
+            if (user == null)
+            {
+                return false;
+            }
+
+            // Generate JWT token for password reset
+            string token = _jwtServices.GenerateToken(user);
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                throw new InvalidOperationException("Generated token is null or empty.");
+            }
+
+            return await _emailService.SendEmailAsync(forgetPasswordModel.Email, "Reset Password", token);
+        }
+
+
+
+
+        public async Task<bool> ResetPasswordAsync(ResetPasswordModel resetPasswordModel)
+        {
+            string email = _jwtServices.ValidateToken(resetPasswordModel.Token);
+            if (string.IsNullOrEmpty(email))
+            {
+                return false;
+            }
+
+            var user = await _userRL.GetEmailAsync(email);
+            if (user == null)
+            {
+                return false;
+            }
+
+            // Hash the new password
+            user.Password = PasswordHashing(resetPasswordModel.NewPassword);
+
+            return await _userRL.UpdatePasswordAsync(user);
         }
     }
 }

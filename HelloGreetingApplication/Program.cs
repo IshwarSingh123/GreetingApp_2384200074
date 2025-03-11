@@ -24,6 +24,7 @@ builder.Services.AddControllers(options =>
 .AddNewtonsoftJson();
 
 
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 builder.Services.AddScoped<IGreetingRL,GreetingRL>();
@@ -121,6 +122,11 @@ builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 
 var app = builder.Build();
+app.UseRouting();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
 
 app.UseSwagger();//json file create karta hai
 app.UseSwaggerUI();// colourfull UI create krta.

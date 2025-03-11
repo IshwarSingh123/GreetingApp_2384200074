@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using ModelLayer.Model;
 using RepositoryLayer.Context;
@@ -40,33 +41,48 @@ namespace RepositoryLayer.Service
             
 
         }
-        public UserEntity GetEmail(string mail)
+        
+        public async Task<UserEntity> GetEmailAsync(string email)
         {
-            return _dbContext.User.FirstOrDefault(e => e.Email == mail);
+            var user = await _dbContext.User.FirstOrDefaultAsync(u => u.Email == email);
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            return user;
         }
 
-        public UserEntity Registration(UserEntity userEntity)
+
+        public async Task<UserEntity> Registration(UserEntity userEntity)
         {
             try
             {
-                var data = _dbContext.User.FirstOrDefault(e => e.Email == userEntity.Email);
+                var data = await _dbContext.User.FirstOrDefaultAsync(e => e.Email == userEntity.Email);
                 if (data != null)
                 {
                     throw new Exception("User Already registered!");
                 }
                 _dbContext.User.Add(userEntity);
-                _dbContext.SaveChanges();
-                return data;
-
-
+                await _dbContext.SaveChangesAsync();
+                return userEntity;
             }
             catch (Exception ex)
             {
-                _logger.LogError("Id does not exist");
+                _logger.LogError("Error in Registration: " + ex.Message);
                 throw;
             }
         }
 
-       
+
+        public async Task<bool> UpdatePasswordAsync(UserEntity userEntity)
+        {
+            
+            _dbContext.User.Update(userEntity);
+            await _dbContext.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

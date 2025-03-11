@@ -7,7 +7,9 @@ using RepositoryLayer.Service;
 
 namespace HelloGreetingApplication.Controllers
 {
-    public class UserController : Controller
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UserController : ControllerBase
     {
         private readonly IUserBL _userBL;
         private readonly ILogger<UserRL> _logger;
@@ -51,12 +53,12 @@ namespace HelloGreetingApplication.Controllers
         /// <param name="registrationUserModel"></param>
         /// <returns></returns>
         [HttpPost("register")]
-        public IActionResult Registration(RegistrationUserModel registrationUserModel)
+        public async Task<IActionResult> Registration(RegistrationUserModel registrationUserModel)
         {
             try
             {
                 var response = new ResponseModel<string>();
-                var data = _userBL.Registration(registrationUserModel);
+                var data = await _userBL.Registration(registrationUserModel);
 
 
                 response.Success = true;
@@ -70,16 +72,41 @@ namespace HelloGreetingApplication.Controllers
             {
                 _logger.LogError("User Already Registered.");
                 var errorResponse = ExceptionHandler.HandleException(ex, _logger);
-                return NotFound(errorResponse);
+                return BadRequest(errorResponse);
             }
 
             
         }
-
-        [HttpPost("reset-password")]
-        public IActionResult ResetPassword(UserEntity userEntity)
+        /// <summary>
+        /// Post method to Forget password
+        /// </summary>
+        /// <param name="forgetPasswordModel"></param>
+        /// <returns></returns>
+        [HttpPost("forget-password")]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordModel forgetPasswordModel)
         {
-            return Ok(userEntity);
+            var result = await _userBL.ForgetPasswordAsync(forgetPasswordModel);
+            if (!result)
+            {
+                return BadRequest("Email not found!");
+            }
+               
+            return Ok("Reset password email sent successfully.");
+        }
+        /// <summary>
+        /// post method for Reset password
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordModel model)
+        {
+            var result = await _userBL.ResetPasswordAsync(model);
+            if (!result) 
+            { 
+                return BadRequest("Invalid or expired token."); 
+            }
+            return Ok("Password reset successfully.");
         }
 
     }
