@@ -11,8 +11,11 @@ namespace RepositoryLayer.Interface
     public interface IUserRL
     {
         UserEntity Login(LoginUserModel userLoginModel);
-        UserEntity GetEmail(string mail);
-        UserEntity Registration(UserEntity userEntity);
-        
+        Task<UserEntity> GetEmailAsync(string email);
+        Task<UserEntity> Registration(UserEntity userEntity);
+        Task<bool> UpdatePasswordAsync(UserEntity userEntity);
+
+
+
     }
 }

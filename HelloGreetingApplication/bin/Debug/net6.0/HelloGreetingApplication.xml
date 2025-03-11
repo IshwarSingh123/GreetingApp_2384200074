@@ -105,5 +105,19 @@
             <param name="registrationUserModel"></param>
             <returns></returns>
         </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.ForgetPassword(ModelLayer.Model.ForgetPasswordModel)">
+            <summary>
+            Post method to Forget password
+            </summary>
+            <param name="forgetPasswordModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HelloGreetingApplication.Controllers.UserController.ResetPassword(ModelLayer.Model.ResetPasswordModel)">
+            <summary>
+            post method for Reset password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
