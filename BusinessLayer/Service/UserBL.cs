@@ -48,7 +48,7 @@ namespace BusinessLayer.Service
             }
             catch (Exception ex)
             {
-                _logger.LogError("Data Not found");
+                _logger.LogError(ex.Message);
                 throw;
             }
            
@@ -77,7 +77,7 @@ namespace BusinessLayer.Service
 
                 return await _userRL.Registration(newUser);
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -89,15 +89,18 @@ namespace BusinessLayer.Service
         {
             try
             {
-                byte[] salt;
-                new RNGCryptoServiceProvider().GetBytes(salt = new byte[SaltSize]);
-                var pbkdf2 = new Rfc2898DeriveBytes(userPass, salt, Iterations);
+              
+
+                byte[] salt = RandomNumberGenerator.GetBytes(SaltSize);
+                using var pbkdf2 = new Rfc2898DeriveBytes(userPass, salt, Iterations, HashAlgorithmName.SHA256);
                 byte[] hash = pbkdf2.GetBytes(HashSize);
+
                 byte[] hashByte = new byte[SaltSize + HashSize];
-                Array.Copy(salt, 0, hashByte, 0, SaltSize);
-                Array.Copy(hash, 0, hashByte, SaltSize, HashSize);
-                string hashedPassword = Convert.ToBase64String(hashByte);
-                return hashedPassword;
+                Buffer.BlockCopy(salt, 0, hashByte, 0, SaltSize);
+                Buffer.BlockCopy(hash, 0, hashByte, SaltSize, HashSize);
+
+                return Convert.ToBase64String(hashByte);
+
             }
             catch (Exception ex)
             {

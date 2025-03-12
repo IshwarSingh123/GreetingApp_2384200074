@@ -17,6 +17,7 @@ namespace RepositoryLayer.Interface
         List<GreetingEntity> GetAllGreetings();
 
         GreetingEntity EditMessage(GreetingModel greetingModel);
+        UserEntity SendGetGreeting(GreetIdModel greetIdModel);
 
         string DeleteMessage(GreetIdModel greetIdModel);
     }

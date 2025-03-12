@@ -33,7 +33,7 @@ namespace RepositoryLayer.Service
                 }
                 return null;
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 _logger.LogError("Id does not exist");
                 throw;

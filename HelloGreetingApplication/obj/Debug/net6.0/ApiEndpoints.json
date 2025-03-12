@@ -204,8 +204,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "frontendRequest",
-        "Type": "ModelLayer.Model.FrontendRequest",
+        "Name": "greetIdModel",
+        "Type": "ModelLayer.Model.GreetIdModel",
         "IsRequired": true
       }
     ],

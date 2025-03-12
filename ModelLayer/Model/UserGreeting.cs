@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.Model
 {
-    public class ForgetPasswordModel
+    public class UserGreeting
     {
-        public string? Email {  get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
