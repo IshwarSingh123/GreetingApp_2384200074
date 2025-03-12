@@ -175,26 +175,25 @@
         ],
         "summary": "GetGreeting method to print hello firstName lastName",
         "requestBody": {
-          "description": "",
           "content": {
             "application/json-patch+json": {
               "schema": {
-                "$ref": "#/components/schemas/FrontendRequest"
+                "$ref": "#/components/schemas/GreetIdModel"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FrontendRequest"
+                "$ref": "#/components/schemas/GreetIdModel"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/FrontendRequest"
+                "$ref": "#/components/schemas/GreetIdModel"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/FrontendRequest"
+                "$ref": "#/components/schemas/GreetIdModel"
               }
             }
           }
@@ -516,20 +515,6 @@
         "type": "object",
         "properties": {
           "email": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "FrontendRequest": {
-        "type": "object",
-        "properties": {
-          "fristName": {
-            "type": "string",
-            "nullable": true
-          },
-          "lastName": {
             "type": "string",
             "nullable": true
           }

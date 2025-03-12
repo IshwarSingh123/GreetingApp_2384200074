@@ -29,6 +29,7 @@ namespace BusinessLayer.Service
         {
             return _greetingRL.FindGreetingMessage(id);
         }
+        
 
         public string GetGreeting()
             {
@@ -46,25 +47,27 @@ namespace BusinessLayer.Service
             return _greetingRL.GetAllGreetings();
         }
 
-        public string SendGreeting(string firstName, string lastName)
-            {
-                if (firstName!=null && lastName != null)
+
+        public string SendGetGreeting(GreetIdModel greetIdModel)
+        {
+            var data = _greetingRL.SendGetGreeting(greetIdModel);
+                if (data.FirstName!=null && data.LastName != null)
                 {
-                    return $"Hello, {firstName} {lastName}!";
+                    return $"Hello, {data.FirstName} {data.LastName}!";
                 }
 
-                if (firstName!=null)
+                if (data.FirstName != null)
                 {
-                    return $"Hello, {firstName}!";
+                    return $"Hello, {data.FirstName}!";
                 }
 
-                if (lastName!=null)
+                if (data.LastName != null)
                 {
-                    return $"Hello, Mr./Ms. {lastName}!";
+                    return $"Hello, Mr./Ms. {data.LastName}!";
                 }
 
                 return "Hello, World!";
-            }
+        }
 
         public GreetingEntity EditMessage(GreetingModel greetingModel)
         {
@@ -94,5 +97,7 @@ namespace BusinessLayer.Service
                 throw;
             }
         }
+
+
     }
     }

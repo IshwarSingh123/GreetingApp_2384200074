@@ -35,12 +35,13 @@ namespace HelloGreetingApplication.Controllers
             _greetingBL = greetingBL;
             _greetingModel = greetingModel;
         }
-        
+
 
         /// <summary>
         /// Get  method to get the greeting message
         /// </summary>
         /// <returns>"Hello, World!"</returns>
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -55,6 +56,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="requestModel"></param>
         /// <returns>response model</returns>
+        [Authorize]
         [HttpPost]
         public IActionResult Post(RequestModel requestModel)
         {
@@ -69,6 +71,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="requestModel"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPut]
         public IActionResult Put(RequestModel requestModel) 
         {
@@ -92,6 +95,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="requestModel"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPatch]
         public IActionResult Patch(RequestModel requestModel)
         {
@@ -112,6 +116,7 @@ namespace HelloGreetingApplication.Controllers
         /// <param name="key"></param>
         /// <returns></returns>
 
+        [Authorize]
         [HttpDelete("{key}")]
         public IActionResult Delete(string key)
         {
@@ -129,6 +134,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="_greetingBL"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpGet]
         [Route("helloGreeeting")]
         public IActionResult PostGreeting()
@@ -140,11 +146,12 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="frontendRequest"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
         [Route("getGreeting")]
-        public IActionResult GetGreeting(FrontendRequest frontendRequest)
+        public IActionResult GetGreeting(GreetIdModel greetIdModel)
         {
-            string message = _greetingBL.SendGreeting(frontendRequest.FristName, frontendRequest.LastName);
+            string message = _greetingBL.SendGetGreeting(greetIdModel);
             return Ok(new { Success = true, Message = message });
         }
 
@@ -172,6 +179,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPost]
         [Route("findMessage")]
         public IActionResult FindGreetingMessage(int id)
@@ -224,6 +232,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="greetingModel"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpPatch]
         [Route("editMessage")]
 
@@ -257,6 +266,7 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <param name="greetIdModel"></param>
         /// <returns></returns>
+        [Authorize]
         [HttpDelete]
         [Route("deleteMessage")]
         public IActionResult DeleteMessage(GreetIdModel greetIdModel)

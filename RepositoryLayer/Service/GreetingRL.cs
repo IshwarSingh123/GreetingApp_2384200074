@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using ModelLayer.Model;
+﻿using ModelLayer.Model;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Context;
 using RepositoryLayer.Entity;
@@ -45,12 +39,12 @@ namespace RepositoryLayer.Service
             return greetingModel;  // Return saved message
         }
         
-
-        public GreetingEntity FindGreetingMessage(int id)
+        //find greeting by Id
+        public GreetingEntity FindGreetingMessage(GreetingModel greetingModel)
         {
-            return _dbContext.Greeting.FirstOrDefault(g => g.GreetingId==id);
-           
-            
+            return _dbContext.Greeting.FirstOrDefault(g => g.GreetingId == greetingModel.Id && g.UserId == greetingModel.Id);
+
+
         }
 
         public List<GreetingEntity> GetAllGreetings()
@@ -81,6 +75,12 @@ namespace RepositoryLayer.Service
            
         }
 
+        public UserEntity SendGetGreeting(GreetIdModel greetIdModel)
+        {
+            return _dbContext.User.FirstOrDefault(g => g.Id == greetIdModel.Id );
+        }
+
+
         public string DeleteMessage(GreetIdModel greetIdModel)
         {
             try
@@ -93,13 +93,18 @@ namespace RepositoryLayer.Service
                 _dbContext.Remove(result);
                 _dbContext.SaveChanges();
                 return "Message Delete Successfully!";
-                
+
             }
-            catch(KeyNotFoundException ex)
+            catch (KeyNotFoundException ex)
             {
                 _logger.LogError(ex.Message);
                 throw;
             }
+        }
+
+        public GreetingEntity FindGreetingMessage(int id)
+        {
+            return _dbContext.Greeting.FirstOrDefault(g => g.GreetingId == id);
         }
     }
   

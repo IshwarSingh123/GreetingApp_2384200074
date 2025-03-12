@@ -11,7 +11,7 @@ namespace BusinessLayer.Interface
     public interface IGreetingBL
     {
         string GetGreeting();
-        string SendGreeting(string firstName, string lastName);
+        string SendGetGreeting(GreetIdModel greetIdModel);
 
        GreetingModel GreetingMessage(GreetingModel greetingModel);
 

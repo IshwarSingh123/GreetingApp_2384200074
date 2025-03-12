@@ -50,7 +50,7 @@
             <param name="_greetingBL"></param>
             <returns></returns>
         </member>
-        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting(ModelLayer.Model.FrontendRequest)">
+        <member name="M:HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting(ModelLayer.Model.GreetIdModel)">
             <summary>
             GetGreeting method to print hello firstName lastName
             </summary>
